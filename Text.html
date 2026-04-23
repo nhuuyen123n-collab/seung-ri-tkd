@@ -1,0 +1,334 @@
+<!DOCTYPE html><html class="dark" lang="vi"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>SEUNG RI - THE ORIGIN</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;500;700&amp;family=Inter:wght@400;700&amp;family=Newsreader:ital,wght@1,400&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "inverse-surface": "#e2e2e2",
+                        "surface-dim": "#131313",
+                        "on-secondary-fixed": "#1c1b1b",
+                        "on-secondary": "#313030",
+                        "error-container": "#93000a",
+                        "on-error-container": "#ffdad6",
+                        "secondary-fixed": "#e5e2e1",
+                        "outline": "#988e90",
+                        "secondary": "#c9c6c5",
+                        "on-tertiary-fixed-variant": "#474747",
+                        "on-tertiary": "#303030",
+                        "primary-fixed": "#e2e2e2",
+                        "surface-container-low": "#1b1b1b",
+                        "primary-fixed-dim": "#c6c6c6",
+                        "surface-container-highest": "#353535",
+                        "on-tertiary-container": "#757575",
+                        "on-primary-fixed": "#1b1b1b",
+                        "on-primary-fixed-variant": "#474747",
+                        "tertiary": "#c6c6c6",
+                        "error": "#ffb4ab",
+                        "surface-container-high": "#2a2a2a",
+                        "inverse-on-surface": "#303030",
+                        "secondary-container": "#474646",
+                        "tertiary-fixed-dim": "#c6c6c6",
+                        "inverse-primary": "#5e5e5e",
+                        "on-secondary-container": "#b7b4b4",
+                        "tertiary-container": "#000000",
+                        "on-surface-variant": "#cfc4c5",
+                        "on-error": "#690005",
+                        "surface-container": "#1f1f1f",
+                        "on-tertiary-fixed": "#1b1b1b",
+                        "primary-container": "#000000",
+                        "surface-variant": "#353535",
+                        "surface": "#131313",
+                        "surface-tint": "#c6c6c6",
+                        "primary": "#c6c6c6",
+                        "on-primary-container": "#757575",
+                        "surface-bright": "#393939",
+                        "on-surface": "#e2e2e2",
+                        "secondary-fixed-dim": "#c9c6c5",
+                        "background": "#131313",
+                        "on-background": "#e2e2e2",
+                        "on-secondary-fixed-variant": "#474646",
+                        "surface-container-lowest": "#0e0e0e",
+                        "on-primary": "#303030",
+                        "outline-variant": "#4c4546",
+                        "tertiary-fixed": "#e2e2e2"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "unit": "4px",
+                        "container-max": "1440px",
+                        "gutter": "24px",
+                        "margin": "64px"
+                    },
+                    "fontFamily": {
+                        "display-xl": ["Space Grotesk"],
+                        "mono-label": ["Space Grotesk"],
+                        "subheadline-italic": ["Newsreader"],
+                        "body-main": ["Inter"],
+                        "headline-lg": ["Space Grotesk"]
+                    },
+                    "fontSize": {
+                        "display-xl": ["84px", {"lineHeight": "90%", "letterSpacing": "-0.04em", "fontWeight": "700"}],
+                        "mono-label": ["12px", {"lineHeight": "100%", "letterSpacing": "0.1em", "fontWeight": "500"}],
+                        "subheadline-italic": ["24px", {"lineHeight": "140%", "fontWeight": "400"}],
+                        "body-main": ["16px", {"lineHeight": "160%", "fontWeight": "400"}],
+                        "headline-lg": ["48px", {"lineHeight": "110%", "letterSpacing": "-0.02em", "fontWeight": "700"}]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        body {
+            background-color: #000000;
+            color: #e2e2e2;
+            overflow-x: hidden;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .scanline {
+            background: linear-gradient(to bottom, transparent 50%, rgba(0, 0, 0, 0.5) 50%);
+            background-size: 100% 4px;
+            pointer-events: none;
+        }
+        .glow-blue { box-shadow: 0 0 20px rgba(59, 130, 246, 0.4); }
+        .glow-red { box-shadow: 0 0 20px rgba(220, 38, 38, 0.4); }
+        
+        .glitch-text {
+            position: relative;
+            text-shadow: 0.05em 0 0 rgba(255, 0, 0, 0.75),
+                        -0.025em -0.05em 0 rgba(0, 255, 0, 0.75),
+                        0.025em 0.05em 0 rgba(0, 0, 255, 0.75);
+        }
+    </style>
+</head>
+<body class="font-body-main selection:bg-error-container selection:text-on-error-container">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 border-b border-white/10 bg-black/20 backdrop-blur-2xl shadow-[0_4px_30px_rgba(0,0,0,0.5)] backdrop-saturate-150">
+<div class="flex justify-between items-center h-20 px-8 w-full max-w-full">
+<div class="text-3xl font-black italic tracking-tighter text-white drop-shadow-[0_0_10px_rgba(255,255,255,0.7)] font-sans uppercase" style="">
+                SEUNG RI
+            </div>
+<nav class="hidden md:flex items-center space-x-8">
+<a class="text-red-600 font-bold border-b-2 border-red-600 font-sans uppercase tracking-tighter italic" href="#" style="">THE ORIGIN&nbsp;</a>
+<a class="text-white/60 font-medium hover:text-white transition-colors font-sans uppercase tracking-tighter italic" href="#" style="">ACHIEVEMENT</a>
+<a class="text-white/60 font-medium hover:text-white transition-colors font-sans uppercase tracking-tighter italic" href="#" style="">DIGITAL DOMINANCE</a>
+</nav>
+<div class="flex items-center space-x-6">
+<button class="text-white/60 hover:text-white transition-all duration-300 scale-95 active:scale-90" style="">
+<span class="material-symbols-outlined" data-icon="notifications" style="">notifications</span>
+</button>
+<button class="text-white/60 hover:text-white transition-all duration-300 scale-95 active:scale-90" style="">
+<span class="material-symbols-outlined" data-icon="person" style="">person</span>
+</button>
+</div>
+</div>
+</header>
+<!-- SideNavBar -->
+<aside class="fixed left-0 top-0 h-full w-24 hover:w-64 z-[60] border-r border-white/10 transition-all duration-500 group bg-black/40 backdrop-blur-3xl shadow-2xl">
+<div class="flex flex-col py-8 items-center justify-between h-full overflow-hidden">
+<div class="flex flex-col items-center space-y-8 w-full">
+<!-- Avatar Header -->
+<div class="opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-center px-4 w-full">
+<div class="w-12 h-12 rounded-full overflow-hidden border-2 border-red-600 mx-auto mb-2">
+<img alt="Master Instructor Avatar" class="w-full h-full object-cover" data-alt="portrait of a focused martial arts grandmaster instructor in a traditional white dobok uniform with a black belt" src="https://scontent.fdad3-1.fna.fbcdn.net/v/t39.30808-6/295251512_551064903370821_4132058257606841231_n.png?stp=dst-jpg_tt6&amp;_nc_cat=103&amp;ccb=1-7&amp;_nc_sid=53a332&amp;_nc_ohc=tjD2zGVIURcQ7kNvwFmbmw8&amp;_nc_oc=AdrJyTaEUQUIDPeywJ5rxYhFZY7NOyq9x6n18Uvlzmvt3Xatj46FvRBy__L40yC3cl4&amp;_nc_zt=23&amp;_nc_ht=scontent.fdad3-1.fna&amp;_nc_gid=uHxG2-KsfHLdHpAhuyqyXA&amp;_nc_ss=7a3a8&amp;oh=00_Af3C8zbqMzXc1_frvARlS3wBab0qJKatvLFD1Ii87yesbQ&amp;oe=69EE5F71" style="">
+</div>
+<p class="font-mono text-[10px] tracking-widest text-red-500 uppercase font-bold" style="">Seung RI PorTFOLIO</p>
+<p class="font-mono text-[8px] text-white/40 uppercase" style="">2026</p>
+</div>
+<div class="flex flex-col space-y-2 w-full px-4">
+<!-- Tab 1 Active -->
+<button class="w-full flex items-center p-3 rounded-lg bg-red-600/20 text-red-500 border-r-4 border-red-600 shadow-[inset_0_0_20px_rgba(220,38,38,0.3)] transition-all duration-300" style="">
+<span class="material-symbols-outlined" data-icon="grid_view" style="">grid_view</span>
+<span class="ml-4 font-mono text-xs tracking-widest hidden group-hover:block uppercase" style="">SEUNG RI TEAM&nbsp;&nbsp;</span>
+</button>
+<!-- Tabs -->
+<button class="w-full flex items-center p-3 rounded-lg text-white/40 grayscale hover:grayscale-0 hover:text-white hover:bg-blue-600/10 transition-all duration-300" style="">
+<span class="material-symbols-outlined" data-icon="sports_martial_arts" style="">sports_martial_arts</span>
+<span class="ml-4 font-mono text-xs tracking-widest hidden group-hover:block uppercase" style="">FACILITIES</span>
+</button>
+<button class="w-full flex items-center p-3 rounded-lg text-white/40 grayscale hover:grayscale-0 hover:text-white hover:bg-blue-600/10 transition-all duration-300" style="">
+<span class="material-symbols-outlined" data-icon="military_tech" style="">military_tech</span>
+<span class="ml-4 font-mono text-xs tracking-widest hidden group-hover:block uppercase" style="">CHaMpIOnsHIp 2025&nbsp;</span>
+</button>
+<button class="w-full flex items-center p-3 rounded-lg text-white/40 grayscale hover:grayscale-0 hover:text-white hover:bg-blue-600/10 transition-all duration-300" style="">
+<span class="material-symbols-outlined" data-icon="analytics" style="">analytics</span>
+<span class="ml-4 font-mono text-xs tracking-widest hidden group-hover:block uppercase" style="">CHaMpIOnsHIp 2026</span>
+</button>
+</div>
+</div>
+<button class="px-4 py-3 bg-red-600 text-white font-mono text-[10px] font-bold tracking-[0.2em] rounded-sm hover:glow-red transition-all duration-300 group-hover:scale-105 active:scale-95 mb-4" style="">
+<span class="group-hover:hidden"><span class="material-symbols-outlined" data-icon="add_moderator" style="">add_moderator</span></span>
+<span class="hidden group-hover:block whitespace-nowrap" style="">BOOK EVALUATION</span>
+</button>
+</div>
+</aside>
+<!-- Main Content -->
+<main class="ml-24 min-h-screen">
+<!-- Hero Section -->
+<section class="relative h-screen w-full flex items-center justify-center overflow-hidden">
+<!-- Hero Background -->
+<div class="absolute inset-0 z-0">
+<img alt="SeungRi Hero Shot" class="w-full h-full object-cover scale-105" data-alt="dramatic wide angle shot of a traditional Korean martial arts hall at night with cinematic lighting and floating dust particles" src="https://scontent.fdad3-6.fna.fbcdn.net/v/t39.30808-6/488273580_1260384232438881_1879296594733596804_n.jpg?stp=cp6_dst-jpg_tt6&amp;_nc_cat=106&amp;ccb=1-7&amp;_nc_sid=7b2446&amp;_nc_ohc=kxk3pNmFFm0Q7kNvwFzPthM&amp;_nc_oc=AdpNqP7S0cHonUiUQGUK23aapECazcU7CixTZvgUiNTZKc4gyd-VA0LBdHhKBj1OXEICr1S6mLXeD_KaIUapSybX&amp;_nc_zt=23&amp;_nc_ht=scontent.fdad3-6.fna&amp;_nc_gid=-0SQu-cadkJ8vrPiEAWr4w&amp;oh=00_Af1aw9E3my5xEDjmkR_1vLXpsbu4x-fzDx9T4_db-aAGCg&amp;oe=69EFCBC4" style="">
+<div class="absolute inset-0 bg-gradient-to-r from-black via-black/40 to-transparent"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-black/60"></div>
+<!-- Scanning texture overlay -->
+<div class="absolute inset-0 scanline opacity-20"></div>
+</div>
+<!-- Hero Content -->
+<div class="relative z-10 w-full max-w-container-max mx-auto px-margin">
+<div class="max-w-4xl">
+<div class="inline-flex items-center space-x-4 mb-6">
+<span class="h-[1px] w-12 bg-red-600"></span>
+<span class="font-mono-label text-mono-label text-red-500 uppercase tracking-[0.3em]" style="">THE ORIGIN //&nbsp;</span>
+</div>
+<h1 class="font-display-xl text-display-xl uppercase glitch-text mb-8" style="">
+                        SEUNG RI<br>
+<span class="text-outline-variant text-transparent bg-clip-text bg-gradient-to-r from-white to-white/40" style="">TAEKWONDO CENTER</span></h1>
+<p class="font-subheadline-italic text-subheadline-italic italic text-on-surface-variant max-w-2xl mb-12 border-l-4 border-red-600 pl-8" style="">Tạo dựng kỉ niệm, kết nối đam mê</p>
+<div class="flex flex-wrap gap-6">
+<button class="group relative px-10 py-5 bg-red-600 overflow-hidden transition-all duration-300 hover:glow-red" style="">
+<span class="relative z-10 font-mono text-xs font-black tracking-widest text-white" style="">DISCOVER MISSION</span>
+<div class="absolute inset-0 bg-white translate-y-full group-hover:translate-y-0 transition-transform duration-300 opacity-10"></div>
+</button>
+<button class="px-10 py-5 glass-card border-white/20 hover:border-white/40 transition-all duration-300 group" style="">
+<span class="font-mono text-xs font-black tracking-widest text-white group-hover:text-red-500" style="">ENLIST NOW</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Kinetic 3D Stats Floating -->
+<div class="absolute right-margin bottom-20 z-20 flex flex-col gap-4">
+<div class="glass-card p-6 flex flex-col items-end border-l-4 border-l-red-600">
+<span class="font-mono-label text-[10px] text-white/40 uppercase mb-1" style="">Establised SINCe</span>
+<span class="font-display-xl text-4xl text-white tracking-tighter" style="">2016</span>
+</div>
+</div>
+</section>
+<!-- Bento Content Grid -->
+<section class="py-margin px-margin max-w-container-max mx-auto relative">
+<!-- Background Decorative Text -->
+<div class="absolute -right-20 top-40 text-[20rem] font-black text-white/[0.02] select-none pointer-events-none rotate-90 leading-none" style="">
+                TRIUMPH
+            </div>
+<div class="grid grid-cols-12 gap-gutter">
+<!-- Large Meaning Card -->
+<div class="col-span-12 lg:col-span-8 glass-card p-12 group hover:glow-blue transition-all duration-500 overflow-hidden relative">
+<div class="absolute -right-10 -top-10 w-64 h-64 bg-blue-600/10 blur-[100px] group-hover:bg-blue-600/20 transition-all"></div>
+<div class="relative z-10">
+<div class="flex items-center gap-4 mb-8">
+<span class="material-symbols-outlined text-red-600 text-4xl" data-icon="military_tech" style="">military_tech</span>
+<h2 class="font-headline-lg text-headline-lg uppercase" style="">Ý nghĩa biểu tượng "Seung Ri"</h2>
+</div>
+<div class="grid md:grid-cols-2 gap-12">
+<div class="space-y-6">
+<p class="font-body-main text-body-main text-on-surface-variant leading-relaxed" style="">
+                                    "SeungRi" trong tiếng Hàn có nghĩa là <strong class="text-white">Chiến Thắng.&nbsp;</strong></p>
+<p class="font-body-main text-body-main text-on-surface-variant leading-relaxed" style="">Tại Seung Ri đó là tôn vinh tinh thần vượt qua giới hạn bản thân của mỗi võ sinh - cuộc hành trình bên trong của mỗi thành viên, sự rèn luyện ý chí thép để chiến thắng nỗi sợ hãi bên trong và những giới hạn mà bản thân tự đặt ra.
+                                </p>
+</div>
+<div class="relative h-64 rounded-xl overflow-hidden shadow-2xl">
+<img alt="Martial arts symbolism" class="w-full h-full object-cover transition-all duration-700" data-alt="close up of a traditional martial arts black belt with gold korean embroidery calligraphy on dark textured fabric background" src="https://scontent.fdad3-1.fna.fbcdn.net/v/t39.30808-6/295251512_551064903370821_4132058257606841231_n.png?stp=dst-jpg_tt6&amp;_nc_cat=103&amp;ccb=1-7&amp;_nc_sid=53a332&amp;_nc_ohc=tjD2zGVIURcQ7kNvwFmbmw8&amp;_nc_oc=AdrJyTaEUQUIDPeywJ5rxYhFZY7NOyq9x6n18Uvlzmvt3Xatj46FvRBy__L40yC3cl4&amp;_nc_zt=23&amp;_nc_ht=scontent.fdad3-1.fna&amp;_nc_gid=uHxG2-KsfHLdHpAhuyqyXA&amp;_nc_ss=7a3a8&amp;oh=00_Af3C8zbqMzXc1_frvARlS3wBab0qJKatvLFD1Ii87yesbQ&amp;oe=69EE5F71" style="">
+</div>
+</div>
+</div>
+</div>
+<!-- Small Info Bento Items -->
+<div class="col-span-12 lg:col-span-4 flex flex-col gap-gutter">
+<div class="flex-1 glass-card p-8 border-t-4 border-t-blue-500 group">
+<span class="font-mono-label text-blue-400 mb-4 block" style="">CORE VALUE 01</span>
+<h3 class="font-headline-lg text-2xl uppercase mb-4 text-white" style="">DISCIPLINE</h3>
+<p class="text-white/60 text-sm leading-relaxed" style="">Kỷ luật là nền tảng của mọi chiến thắng. Sự tự giác trong từng buổi tập tạo nên người võ sinh chân chính.</p>
+</div>
+<div class="flex-1 glass-card p-8 border-t-4 border-t-red-600 group">
+<span class="font-mono-label text-red-400 mb-4 block" style="">CORE VALUE 02</span>
+<h3 class="font-headline-lg text-2xl uppercase mb-4 text-white" style="">RESPECT</h3>
+<p class="text-white/60 text-sm leading-relaxed" style="">Học võ đạo bắt đầu từ lễ nghi và kết thúc cũng bằng lễ nghi. Tôn trọng đồng môn và thầy hướng dẫn.</p>
+</div>
+</div>
+<!-- Timeline / Origin Narrative Section -->
+<div class="col-span-12 mt-margin flex flex-col md:flex-row gap-12 items-center">
+<div class="w-full md:w-1/2">
+<div class="relative group">
+<div class="absolute -inset-1 bg-gradient-to-r from-red-600 to-blue-600 rounded-2xl blur opacity-25 group-hover:opacity-50 transition duration-1000"></div>
+<div class="relative glass-card rounded-2xl overflow-hidden aspect-video">
+<img alt="Training session" class="w-full h-full object-cover" data-alt="silhouettes of martial artists practicing high kicks in a modern training studio with dramatic atmospheric lighting and blue backlighting" src="https://scontent.fdad3-6.fna.fbcdn.net/v/t39.30808-6/489039458_1260384275772210_5939204061449752990_n.jpg?stp=cp6_dst-jpg_tt6&amp;_nc_cat=107&amp;ccb=1-7&amp;_nc_sid=7b2446&amp;_nc_ohc=EQImUGxGa10Q7kNvwH3Oe7y&amp;_nc_oc=AdpSdM4euDWRPRD-J9zGaVfKOboPqlCclqMA-WeJ0W3PVrNLGgAlluzboaZEcQcGDrakouRofOw-eE1THhhTA3dm&amp;_nc_zt=23&amp;_nc_ht=scontent.fdad3-6.fna&amp;_nc_gid=ogUlFbqmyqktKx3XbUWgwg&amp;oh=00_Af2YNtAZtYHm4CeQMP836QaBMybyRbjPD9lJkGzN8KZlXQ&amp;oe=69EFD1C3" style="">
+</div>
+</div>
+</div>
+<div class="w-full md:w-1/2 space-y-8">
+<div class="space-y-2">
+<h2 class="font-display-xl text-5xl uppercase tracking-tighter italic" style="">LỊCH SỬ HÌNH THÀNH</h2>
+<p class="font-mono text-red-500 font-bold tracking-widest text-lg" style="">ESTABLISHED: 16.11.2016</p>
+</div>
+<p class="font-body-main text-body-main text-on-surface-variant leading-relaxed" style="">
+                            Bắt đầu từ một niềm đam mê mãnh liệt với Taekwondo, Seung Ri - nơi mỗi cá nhân được mài giũa cả về thể chất lẫn tâm hồn.&nbsp;<div><br></div><div>Qua nhiều năm, chúng tôi duy trì triết lý cốt lõi: Chiến thắng vinh quang nhất là chiến thắng chính mình.
+                        </div></p>
+<div class="grid grid-cols-2 gap-8 py-4">
+<div>
+<div class="text-4xl font-bold text-white mb-1" style="">200+</div>
+<div class="font-mono text-[10px] text-white/40 uppercase tracking-widest" style="">HỌC VIÊN ĐANG THEO TẬP</div>
+</div>
+<div>
+<div class="text-4xl font-bold text-white mb-1" style="">10</div>
+<div class="font-mono text-[10px] text-white/40 uppercase tracking-widest" style="">Years of Excellence</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="py-20 px-margin border-t border-white/10 bg-surface-container-lowest mt-margin">
+<div class="max-w-container-max mx-auto flex flex-col md:flex-row justify-between items-start gap-12">
+<div class="max-w-xs space-y-6">
+<div class="text-3xl font-black italic tracking-tighter text-white font-sans uppercase" style="">SEUNG RI</div>
+<p class="text-sm text-white/40 leading-relaxed" style="">
+                        Tạo dựng kỉ niệm kết nối đam mê</p>
+</div>
+<div class="grid grid-cols-2 sm:grid-cols-3 gap-16">
+<div class="space-y-4">
+<p class="font-mono text-xs font-bold text-red-500 uppercase tracking-widest" style="">EXPLORE</p>
+<ul class="space-y-2 text-sm text-white/60">
+<li class="" style=""><a class="hover:text-white transition-colors italic uppercase tracking-tighter" href="#" style="">The Origin</a></li>
+<li class="" style=""><a class="hover:text-white transition-colors italic uppercase tracking-tighter" href="#" style="">Programs</a></li>
+<li class="" style=""><a class="hover:text-white transition-colors italic uppercase tracking-tighter" href="#" style="">Elite Club</a></li>
+</ul>
+</div>
+<div class="space-y-4">
+<p class="font-mono text-xs font-bold text-red-500 uppercase tracking-widest" style="">TACTICAL</p>
+<ul class="space-y-2 text-sm text-white/60">
+<li class="" style=""><a class="hover:text-white transition-colors italic uppercase tracking-tighter" href="#" style="">Location</a></li>
+<li class="" style=""><a class="hover:text-white transition-colors italic uppercase tracking-tighter" href="#" style="">Schedules</a></li>
+<li class="" style=""><a class="hover:text-white transition-colors italic uppercase tracking-tighter" href="#" style="">Support</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="max-w-container-max mx-auto mt-20 pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-4">
+<p class="font-mono text-[10px] text-white/20 uppercase tracking-[0.2em]" style="">© 2024 SEUNG RI TAEKWONDO ACADEMY. ALL RIGHTS RESERVED.</p>
+<div class="flex gap-6">
+<span class="material-symbols-outlined text-white/20 hover:text-red-500 cursor-pointer transition-colors" data-icon="facebook" style="">social_leaderboard</span>
+<span class="material-symbols-outlined text-white/20 hover:text-red-500 cursor-pointer transition-colors" data-icon="instagram" style="">retweet</span>
+</div>
+</div>
+</footer>
+</main>
+</body></html>
